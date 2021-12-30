@@ -1,0 +1,12 @@
+use cadastro;
+desc gafanhotos;
+alter table gafanhotos add cursopreferido int;
+
+alter table gafanhotos
+add foreign key (cursopreferido)
+references cursos(idcurso);
+
+select * from gafanhotos;
+select * from cursos;
+
+UPDATE `cadastro`.`gafanhotos` SET `cursopreferido` = '2' WHERE (`id` = '1');
