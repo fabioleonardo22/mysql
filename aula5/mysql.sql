@@ -1,21 +1,19 @@
-select * from cursos
-where nome like 'P%';
+select ano , nome, carga from cursos
+order by ano, nome;
 
-select * from cursos
-where nome like '%A%';
+select nome, descricao, ano from cursos 
+where ano < 2016
+order by ano, nome;
 
-select * from cursos
-where nome like 'ph%p_';
+select nome, ano from cursos
+where ano between 2015 and 2018
+order by ano desc, nome asc;
 
-select distinct nacionalidade from gafanhotos
-order by nacionalidade;
+select nome, descricao, ano from cursos
+where ano in (2014, 2018)
+order by ano;
 
-select count(*) from cursos where carga > 40;
+select nome, carga, totaulas from cursos
+where carga > 35 and totaulas < 30;
 
-select max(carga) from cursos;
-
-select avg(totaulas) from cursos where ano = '2016';
-
-
-select sum(totaulas) from cursos where ano = '2015';
-
+describe cursos;
